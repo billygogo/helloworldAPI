@@ -8,7 +8,11 @@ const PORT = 3000;
 app.use(express.json());
 
 // Hello World 엔드포인트 - API 키 검증 미들웨어 적용
-app.get('/hello', validateApiKeyMiddleware, (req: Request, res: Response) => {
+// app.get('/hello', validateApiKeyMiddleware, (req: Request, res: Response) => {
+//     res.json({ message: 'Hello, World!' });
+// });
+
+app.get('/hello', (req: Request, res: Response) => {
     res.json({ message: 'Hello, World!' });
 });
 
